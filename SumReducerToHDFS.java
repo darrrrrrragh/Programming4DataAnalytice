@@ -3,7 +3,7 @@ import java.io.IOException;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Reducer;;
 
-public class SumReducer extends
+public class SumReducerToHDFS extends
        Reducer<Text, IntWritable, Text, IntWritable>{
 	
 	private IntWritable result = new IntWritable();
