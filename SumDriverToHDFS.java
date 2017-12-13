@@ -20,12 +20,12 @@ public class SumDriver {
 		//}
 		Scan scan = new Scan();
 		Job job = Job.getInstance(conf, "Output to HDFS.");
-		job.setJarByClass(SumDriver.class);
+		job.setJarByClass(SumDriverToHDFS.class);
 		TableMapReduceUtil.initTableMapperJob("businesscatCount1", scan, 
 				                              SumMapper.class,
 				                              Text.class, IntWritable.class, 
 				                              job);
-		job.setReducerClass(SumReducer.class);
+		job.setReducerClass(SumReducerToHDFS.class);
 		job.setMapOutputKeyClass(Text.class);
 		job.setMapOutputValueClass(IntWritable.class);
 		job.setOutputKeyClass(Text.class);
