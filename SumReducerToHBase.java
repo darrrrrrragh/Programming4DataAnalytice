@@ -7,7 +7,7 @@ import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.io.*;
 
 
-public class SumReducer2 extends
+public class SumReducerToHBase extends
        TableReducer<Text, IntWritable, ImmutableBytesWritable>{
 	
 
