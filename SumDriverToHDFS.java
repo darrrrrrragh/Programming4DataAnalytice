@@ -10,7 +10,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
 
 
-public class SumDriver {
+public class SumDriverToHDFS {
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();//HBaseConfiguration.create();
 		//String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
