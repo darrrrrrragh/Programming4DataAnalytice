@@ -1,0 +1,9 @@
+#SQOOP bash commands:
+
+bin/sqoop import --connect jdbc:mysql://127.0.0.1/yelp_db --username root --password password --table "businesscat" --columns "id, state, stars, review_count, category" --hbase-table "businesscatNEW" --column-family "cf1" --hbase-row-key id -m 1
+
+bin/sqoop import --connect jdbc:mysql://127.0.0.1/yelp_db --username root --password password --table "users2016" --columns "id, review_count, useful, funny, cool, fans, average_stars, yelping_since" --hbase-table "users2016NEW" --column-family "cf1" --hbase-row-key id -m 1
+
+bin/sqoop import --connect jdbc:mysql://127.0.0.1/yelp_db --username root --password password --table "users2015" --columns "id, review_count, useful, funny, cool, fans, average_stars, yelping_since" --hbase-table "users2015NEW" --column-family "cf1" --hbase-row-key id -m 1
+
+bin/sqoop import --connect jdbc:mysql://127.0.0.1/yelp_db --username root --password password --table "businesscat" --columns "id, state, stars, review_count, category" --hive-import --hbase-table businesscatHive
